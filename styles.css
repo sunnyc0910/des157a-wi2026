@@ -71,6 +71,26 @@ header h2{
   background-color: #000;
 }
 
+.alien{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 480px;     
+  height: 380px;
+
+  background-image: url("images/alien-normal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.alien:hover{
+  background-image: url("images/alien-hover.png");
+}
+
 main{
   display: flex;
   gap: 18px;
