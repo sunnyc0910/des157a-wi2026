@@ -31,10 +31,10 @@
 
 body{
   color: #f2f2f2;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   background-image: url("images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* 可选：滚动时背景不动 */
+  background-attachment: fixed;
 }
