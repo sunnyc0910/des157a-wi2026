@@ -41,7 +41,7 @@ body{
 
 header{
   text-align: left;
-  margin: 5px 200px 0;
+  margin: 5px 210px 0;
 }
 
 header h1{
@@ -94,6 +94,7 @@ header h2{
 main{
   display: flex;
   gap: 18px;
+  margin: auto 100px;
   padding: 0 20px;
   justify-content: space-between;
 }
