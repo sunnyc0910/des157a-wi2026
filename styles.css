@@ -179,7 +179,7 @@ main{
 
 .card{
   margin: auto 0;
-  padding: 16px;
+  padding: 6px;
   border-radius: 20px;
   background: linear-gradient(180deg, #FFFBEA 0%, #F1FF4F 98.73%);
 }
