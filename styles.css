@@ -41,7 +41,7 @@ body{
 
 header{
   text-align: left;
-  margin: 5px 210px 0;
+  margin: 20px 210px 0;
 }
 
 header h1{
@@ -89,6 +89,79 @@ header h2{
 
 .alien:hover{
   background-image: url("images/alien-hover.png");
+}
+
+.ufo-card{
+  position: absolute;
+  width: 190px;    
+  height: 105px;    
+  perspective: 1000px;
+}
+
+.ufo-card .back,
+.ufo-card .front{
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.8s; 
+}
+
+
+.ufo-card .back{
+  transform: rotateY(0deg);
+}
+
+.ufo-card .front{
+  transform: rotateY(-180deg);
+}
+
+.ufo-card:hover .back{
+  transform: rotateY(180deg);
+}
+
+.ufo-card:hover .front{
+  transform: rotateY(0deg);
+}
+
+.ufo1 .back{  
+    background-image: url("images/ufo1.png"); 
+}
+
+.ufo1 .front{ 
+    background-image: url("images/ufo-hover.png"); 
+}
+
+.ufo2 .back{  
+    background-image: url("images/ufo2.png"); 
+}
+
+.ufo2 .front{ 
+    background-image: url("images/ufo-hover.png"); 
+}
+
+.ufo3 .back{  
+    background-image: url("images/ufo3.png"); 
+}
+
+.ufo3 .front{ 
+    background-image: url("images/ufo-hover.png"); 
+}
+
+
+.ufo1{ 
+    left: 20px;  top: 85px; 
+}
+
+.ufo2{ 
+    left: 220px; top: 85px; 
+}
+
+.ufo3{ 
+    left: 400px; top: 85px; 
 }
 
 main{
