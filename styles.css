@@ -84,3 +84,12 @@ main{
   color: #000;
   height: 380px;   
 }
+
+.card-inner h2{
+  padding: 14px 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 22px;
+  border-bottom: 2px solid #000000;
+}
