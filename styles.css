@@ -38,3 +38,25 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+header{
+  text-align: left;
+  margin: 5px 20px 0;
+}
+
+header h1{
+  font-family: "Audiowide", sans-serif;
+  color: #F1FF4F;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0 0 5px;
+  letter-spacing: 1px;
+}
+
+header h2{
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
