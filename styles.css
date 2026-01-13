@@ -60,3 +60,27 @@ header h2{
   margin: 0 0 12px;
 }
 
+main{
+  display: flex;
+  gap: 18px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.col{
+  flex: 1;
+}
+
+.card{
+  padding: 16px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFFBEA 0%, #F1FF4F 98.73%);
+}
+
+.card-inner{
+  border-radius: 16px;
+  border: 2px solid #000;
+  background: linear-gradient(180deg, rgba(255, 251, 234, 0.20) 64.55%, rgba(241, 255, 79, 0.20) 92.73%), #FFFBEA;
+  color: #000;
+  height: 380px;   
+}
