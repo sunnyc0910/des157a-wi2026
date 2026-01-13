@@ -75,8 +75,8 @@ header h2{
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 440px;     
-  height: 340px;
+  width: 450px;     
+  height: 350px;
 
   background-image: url("images/alien-normal.png");
   background-size: contain;
