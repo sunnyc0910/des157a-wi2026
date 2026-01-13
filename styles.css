@@ -39,7 +39,6 @@ body{
   background-attachment: fixed;
 }
 
-
 header{
   text-align: left;
   padding: 5px 50px 0;
@@ -51,7 +50,7 @@ header h1{
   color: #F1FF4F;
   font-weight: 400;
   font-size: 36px;
-  margin: 0 20px 5px;
+  margin: 0 0 5px;
   letter-spacing: 1px;
 }
 
@@ -59,7 +58,7 @@ header h2{
   font-family: "Chakra Petch", sans-serif;
   font-size: 26px;
   font-weight: 400;
-  margin: 0 20px 12px;
+  margin: 0 0 12px;
 }
 
 #banner{
