@@ -30,13 +30,22 @@
 
 
 body{
-  color: #f2f2f2;
+  color: #FFFBEA;
   font-family: "Chakra Petch", sans-serif;
   background-image: url("images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+#container{
+  padding: 20px 0 40px;
+  width: 1200px;
+  height: 750px;
+  margin: 0 auto;    
+   padding: 20px 0 40px;    
+  position: relative;   
 }
 
 header{
@@ -116,6 +125,7 @@ header h2{
   0%, 45%   { opacity: 0; }
   55%, 100% { opacity: 1; }
 }
+
 
 .ufo-card{
   position: absolute;
