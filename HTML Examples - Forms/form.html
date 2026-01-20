@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Example Form
+    </title>
+
+    <style>
+
+        input, 
+        label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 1em;
+        }
+
+        fieldset input, fieldset label {
+            display: inline;
+        }
+        
+        fieldset label {
+            margin-bottom: 1em;
+        }
+
+
+
+    </style>
+    </head>
+
+    <body>
+
+        <h1>Example Form</h1>
+
+        <form action="processor.php" method="POST">
+
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Huanxin" required>
+            <!-- Form Validation 'required' -->
+
+            <label for="favcolor">Favorite Color</label>
+            <input type="color" name="favcolor" id="favcolor">
+            
+            <fieldset>
+            <legend>Do you want spam?</legend>
+                <input type="radio" name="spam" id="spam-yes" value="yes">
+                <label for="spam-yes">Yes, send me spam</label>
+                
+                <!-- if you want to set this to be default option, add 'checked' -->
+                <input type="radio" name="spam" id="spam-no" value="no" checked>
+                <label for="spam-no">No, don't send me spam</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What animals do you like?</legend>
+
+                <input type="checkbox" name="animal[]" id="cat" value="cat">
+                <label for="cat">Cat</label>
+
+                <input type="checkbox" name="animal[]" id="dog" value="dog">
+                <label for="dog">Dog</label>
+
+                <input type="checkbox" name="animal[]" id="llama" value="llama">
+                <label for="llama">Llama</label>
+            </fieldset>
+
+            <label for="cheese">Favorite Cheese</label>
+            <select id="cheeses">
+                <!-- if you want to set this to be default option, add 'selected' -->
+                <option value="" selected>---</option>
+                <option value="American">American</option>
+                <option value="Brie">Brie</option>
+                <option value="Cheddar">Cheddar</option>
+                <option value="Swiss">Swiss</option>
+            </select>
+            <label for="comments">Please provide Comments</label>
+            <textarea id="comments" name="comments" cols="30" rows="10">default</textarea>
+
+            <input type="submit" name="submit" id="send-form" value="Send this form!">
+
+        </form>
+    </body>
+</html>
