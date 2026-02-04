@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        JavaScript Experiment 2
+    </title>
+    </head>
+
+    <body>
+
+        <h1>Experiment 2</h1>
+        <p id="message">Your favorite color will appear here.</p>
+
+        <script>
+            // the challgenge I chose for this experiment is Using prompt() ask users to input their favorite color from a list of colors. Then change the background color of the page to that color.
+
+            // Use prompt() to get user input
+            var color = prompt(
+            "Hi! Pick your favorite color from the list: red, orange, yellow, green, blue, purple."
+            );
+            
+            // Select the message element
+            var message = document.querySelector("#message");
+
+            // Change background color based on user input
+            //use if loop to check the color entered by user
+            if (color === "red") {
+                document.body.style.backgroundColor = "red";
+                message.innerHTML = "Your favorite color is red"; //use innerHTML to change the message
+            }
+
+            else if (color === "orange") {
+                document.body.style.backgroundColor = "orange";
+                message.innerHTML = "Your favorite color is orange";
+            }
+
+            else if (color === "yellow") {
+                document.body.style.backgroundColor = "yellow";
+                message.innerHTML = "Your favorite color is yellow";
+            }
+
+            else if (color === "green") {
+                document.body.style.backgroundColor = "green";
+                message.innerHTML = "Your favorite color is green";
+            }
+
+            else if (color === "blue") {
+                document.body.style.backgroundColor = "blue";
+                message.innerHTML = "Your favorite color is blue";
+            }
+   
+            else if (color === "purple") {
+                document.body.style.backgroundColor = "purple";
+                message.innerHTML = "Your favorite color is purple";
+            }
+
+            else if (color === "pink") {
+                document.body.style.backgroundColor = "pink";
+                message.innerHTML = "Your favorite color is pink";
+            }
+            //show the message if user didn't enter anything
+            else if (color === '') {
+               message.innerHTML = "You didn't enter any color :(";
+            }
+            
+            else {
+                message.innerHTML = "The color is not on the list";
+            }
+
+        </script>
+
+    </body>
+
+</html>
