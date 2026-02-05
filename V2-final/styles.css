@@ -1,0 +1,202 @@
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chakra-petch-regular {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chakra-petch-semibold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Audiowide", sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+/* 背景图设置 */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg.jpg'); /* 替换为你的背景图片 */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+main {
+    /* 保持内部布局结构 */
+    display: flex;
+    position: relative;
+    
+    /* 这里是你要求的新增样式 */
+    width: 1120px;
+    height: 670px;
+    border-radius: 26px;
+    border: 2px solid #F1FF4F; /* 霓虹黄边框 */
+    background: rgba(0, 0, 0, 0.75); /* 半透明黑色背景 */
+    
+    /* 确保边框不会撑大容器尺寸 */
+    box-sizing: border-box; 
+
+    /* 如果屏幕比这个框小，防止贴边太难看 (可选) */
+    max-width: 98vw;
+    max-height: 98vh;
+}
+
+/* --- 左侧面板样式 --- */
+.left-panel {
+    width: 45%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* UFO 图片样式 */
+.ufo-img {
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    width: 120px;
+    z-index: 10;
+}
+
+/* 表单样式 */
+#myform {
+    border-left: 4px solid #F4F859; /* 左侧黄色竖线 */
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-group input[type="text"] {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #F4F859; /* 霓虹黄边框 */
+    border-radius: 25px; /* 胶囊形状 */
+    height: 40px;
+    padding: 0 15px;
+    color: #F4F859;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus {
+    box-shadow: 0 0 10px #F4F859;
+    background: rgba(244, 248, 89, 0.1);
+}
+
+/* Submit 按钮样式 */
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background: #F4F859;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/* --- 右侧 Article (Overlay) 样式 --- */
+#madlib {
+    /* 默认是隐藏的，或者通过JS控制显隐 */
+    transition: opacity 0.5s ease;
+}
+
+/* 当加上 .hidden 类时隐藏 */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 当作为 Overlay 显示时的样式 */
+.overlay {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    background-color: #FFFEEC; /* 纸张米黄色 */
+    color: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #1a1a1a;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+    font-family: "Chakra Petch", sans-serif;
+    z-index: 100;
+}
+
+/* Madlib 内部文字样式 */
+.card-header {
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.fill-in {
+    color: #d6006e; /* 填入词的颜色 */
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #1a1a1a;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Cuteness Entry Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:ital,wght@0,400;0,600;1,400;1,600&family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="background-container"></div>
+
+    <main>
+        <section class="left-panel">
+
+            <img src="images/ufo.png" alt="Cute UFO" class="ufo-img">
+
+            <form id="myform">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="adj">Adjective (Describing texture)</label>
+                    <input type="text" id="adj" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="fruit">Name of a fruit</label>
+                    <input type="text" id="fruit" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="noun">Noun</label>
+                    <input type="text" id="noun" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="food">Food (or snack)</label>
+                    <input type="text" id="food" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="verb">Verb</label>
+                    <input type="text" id="verb" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Name of a Animal</label>
+                    <input type="text" id="animal" required autocomplete="off">
+                </div>
+
+                <input type="submit" value="GENERATE ENTRY PASS">
+            </form>
+        </section>
+
+        <article id="madlib" class="overlay hidden">
+            </article>
+
+    </main>
+</body>
+</html>
