@@ -9,7 +9,7 @@
     myForm.addEventListener("submit", function(event){
         event.preventDefault();
         
-        // 1. 获取所有 7 个输入框的值
+
         const name = document.querySelector("#name").value;
         const adj = document.querySelector("#adj").value;
         const fruit = document.querySelector("#fruit").value;
@@ -20,7 +20,7 @@
 
         let myText;
 
-        // 2. 验证逻辑 (Strictly following the reference logic structure)
+
         if (name == '') {
             myText = "Please provide a name";
             document.querySelector('#name').focus();
@@ -57,8 +57,7 @@
         }
 
         else {
-            // 3. 成功时的逻辑：生成 HTML 字符串
-            // 注意：这里包含了关闭按钮和之前的 HTML 结构，以保证样式正确
+        
             myText = `
                 <div class="paper-card">
                     <button class="close-btn" onclick="document.querySelector('#madlib').classList.add('hidden')">×</button>
@@ -88,7 +87,7 @@
                 </div>
             `;
 
-            // 4. 清空输入框 (Strictly following the reference)
+
             document.querySelector("#name").value = '';
             document.querySelector("#adj").value = '';
             document.querySelector("#fruit").value = '';
@@ -97,11 +96,11 @@
             document.querySelector("#verb").value = '';
             document.querySelector("#animal").value = '';
             
-            // 额外步骤：显示 Overlay (移除 hidden class)
+
             madlib.classList.remove("hidden");
         }
 
-        // 5. 将生成的文本 (或错误信息) 放入 HTML
+
         madlib.innerHTML = myText;
         
     });

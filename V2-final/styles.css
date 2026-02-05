@@ -32,40 +32,43 @@ body {
     background-color: #000;
 }
 
-/* 背景图设置 */
+
 .background-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/bg.jpg'); /* 替换为你的背景图片 */
+    background-image: url('images/bg.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 
+
 main {
-    /* 保持内部布局结构 */
+    
     display: flex;
     position: relative;
     
-    /* 这里是你要求的新增样式 */
-    width: 1120px;
-    height: 670px;
-    border-radius: 26px;
-    border: 2px solid #F1FF4F; /* 霓虹黄边框 */
-    background: rgba(0, 0, 0, 0.75); /* 半透明黑色背景 */
     
-    /* 确保边框不会撑大容器尺寸 */
-    box-sizing: border-box; 
+    width: 90vw;  
+    height: 90vh; 
+    max-width: 1600px; 
+    
+  
+    border-radius: 30px;
+    border: 3px solid #F1FF4F; 
+    background: rgba(0, 0, 0, 0.65); 
+    
+    box-sizing: border-box;
+    padding: 20px;
+    
 
-    /* 如果屏幕比这个框小，防止贴边太难看 (可选) */
-    max-width: 98vw;
-    max-height: 98vh;
+    margin: auto; 
 }
 
-/* --- 左侧面板样式 --- */
+
 .left-panel {
     width: 45%;
     padding: 20px;
@@ -75,7 +78,7 @@ main {
     justify-content: center;
 }
 
-/* UFO 图片样式 */
+
 .ufo-img {
     position: absolute;
     top: -40px;
@@ -84,9 +87,9 @@ main {
     z-index: 10;
 }
 
-/* 表单样式 */
+
 #myform {
-    border-left: 4px solid #F4F859; /* 左侧黄色竖线 */
+    border-left: 4px solid #F4F859;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -105,8 +108,8 @@ main {
     display: block;
     width: 100%;
     background: transparent;
-    border: 2px solid #F4F859; /* 霓虹黄边框 */
-    border-radius: 25px; /* 胶囊形状 */
+    border: 2px solid #F4F859; 
+    border-radius: 25px; 
     height: 40px;
     padding: 0 15px;
     color: #F4F859;
@@ -120,7 +123,7 @@ main {
     background: rgba(244, 248, 89, 0.1);
 }
 
-/* Submit 按钮样式 */
+
 input[type="submit"] {
     margin-top: 20px;
     padding: 12px;
@@ -139,26 +142,26 @@ input[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-/* --- 右侧 Article (Overlay) 样式 --- */
+
 #madlib {
-    /* 默认是隐藏的，或者通过JS控制显隐 */
+
     transition: opacity 0.5s ease;
 }
 
-/* 当加上 .hidden 类时隐藏 */
+
 .hidden {
     opacity: 0;
     pointer-events: none;
 }
 
-/* 当作为 Overlay 显示时的样式 */
+
 .overlay {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-    background-color: #FFFEEC; /* 纸张米黄色 */
+    background-color: #FFFEEC; 
     color: #1a1a1a;
     padding: 40px;
     border-radius: 15px;
@@ -168,7 +171,7 @@ input[type="submit"]:hover {
     z-index: 100;
 }
 
-/* Madlib 内部文字样式 */
+
 .card-header {
     border: 2px solid #1a1a1a;
     border-radius: 8px;
@@ -184,7 +187,7 @@ input[type="submit"]:hover {
 }
 
 .fill-in {
-    color: #d6006e; /* 填入词的颜色 */
+    color: #d6006e;
     font-weight: 800;
     text-decoration: none;
     font-family: "Chakra Petch", sans-serif;
