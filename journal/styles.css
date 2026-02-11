@@ -104,6 +104,7 @@ footer a {
 
 
 .card{
+  margin-bottom: 25px;
   width: 100%;
   border-radius: 20px;
   padding: 16px;
@@ -129,10 +130,16 @@ footer a {
   font-family: "Chakra Petch", sans-serif;
   font-size: 22px;
   border-bottom: 2px solid #000000;
+  
 }
 
 .card-inner time{
   margin: auto;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
+  
+}
+
+.card-inner a{
+  color: #FF59A4;
 }
