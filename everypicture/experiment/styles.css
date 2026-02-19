@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    padding: 0;
+    position: relative;
+ }
+
+img {
+      
+    width: 30%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+ }
