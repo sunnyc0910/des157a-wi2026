@@ -4,34 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EveryPicture Project Experiment</title>
+    <title>Everypicture Project Experiment</title>
     <link rel="stylesheet" href="styles.css" />
-    
+
 </head>
 
 <body>
-    <img src="images/a1.jpg" alt="typing">
-    <script>
-         document.addEventListener( 'mousemove', reportPos );
-         const theImg = document.querySelector('img');
-         let prevLoc = 0; 
-
-        function reportPos (event){
-            const imgWidth = theImg.offsetWidth;
-            const percent2px = imgWidth/17;
-            const xPos = event.clientX;
-            const changePhoto = Math.floor(xPos/percent2px) + 1;
-
-            //cons.log(imgWidth);
-
-            if(changePhoto != prevLoc && changePhoto >= 1 && changePhoto <= 17){
-                theImg.src = `images/a${changePhoto}.jpg`;
-                prevLoc = changePhoto;
-                console.log(changePhoto);
-            }
- 
-        }
-    </script>
+    <h1>Everypicture Project Experiment</h1>
+    <h2>Move your mouse over the image from left to right</h2>
+    <img src="images/kb-1.jpg" alt="streetart">
+    <script src="script.js"></script>
 </body>
 
 </html>

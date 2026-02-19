@@ -4,11 +4,28 @@ body {
     position: relative;
  }
 
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+ }
+
+ h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 10;
+ }
+
 img {
       
     width: 30%;
     position: absolute;
-    top: 0%;
+    top: 80px;
     left: 50%;
     transform: translate(-50%, 0%);
  }
