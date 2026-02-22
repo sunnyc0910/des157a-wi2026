@@ -54,10 +54,11 @@ footer a {
 .side-nav{
   width: 50%;
   background-image: url("images/rat.png");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 
-  display: relative;
+  display: flex;
   justify-content: center; 
   align-items: center;    
 }
@@ -67,13 +68,13 @@ footer a {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: absolute;
+  display: flex;
   flex-direction: column;
   gap: 26px; 
 }
 
 .side-nav a{
-  display: absolute;
+  display: flex;
   align-items: center;
   justify-content: center;
 
