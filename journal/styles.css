@@ -54,7 +54,7 @@ footer a {
 .side-nav{
   width: 50%;
   background-image: url("images/rat.png");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 
   display: flex;
