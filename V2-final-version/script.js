@@ -43,3 +43,34 @@ function reportPos(event) {
         console.log(changePhoto);
     }
 }
+
+(function () {
+            'use strict';
+            document.addEventListener('mousemove', reportPos);
+            const theImg = document.querySelector('.animation2 img');
+            let prevXLoc = 0;
+            let prevYLoc = 0;
+
+            function reportPos(event){
+                const windowWidth = window.innerWidth;
+                const widthPercent = windowWidth/9;
+                const xPos = event.clientX;
+                const changePhoto = Math.floor(xPos/ widthPercent) + 1;
+
+                const windowHeight = window.innerHeight;
+                const heightDegree = windowHeight / 120;
+                const yPos = event.clientY;
+                const changeRotation = Math.floor(yPos/heightDegree);
+
+                if (changePhoto !== prevXLoc && changePhoto >= 1 && changePhoto <= 9) {
+                    theImg.src = `images/spray${changePhoto}.jpg`;
+                    prevXLoc = changePhoto;
+                    console.log(prevXLoc);
+                }
+
+                if (changeRotation !== prevYLoc) {
+                    theImg.style.transform = `rotate(${changeRotation}deg)`;
+                    prevYLoc = changeRotation;
+                }
+            }
+        })();

@@ -4,6 +4,14 @@
   font-style: normal;
 }
 
+.sunshiney-regular {
+  font-family: "Sunshiney", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 :root {
     --sliderwidth: 0;
 }
@@ -23,6 +31,17 @@ h1 {
     position: relative;
     z-index: 10;
     font-size: 140px;
+}
+
+h2 {
+    color: #FF0090;
+    text-align: center;
+    font-family: "Sunshiney", cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    font-size: 60px;
 }
 
 /* text of "Art" moving from right to left */
@@ -57,11 +76,10 @@ h1 {
     }
 }
 
-/* hide the images that are not in view */
 .scroll-container {
     width: 100%;
     overflow-x: hidden;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 
 .slider {
@@ -108,5 +126,54 @@ h1 {
     display: block;
     margin-top: 20px;
     margin-bottom: 60px;
+}
+
+.animation2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+}
+
+.animation2 img {
+    max-width: 100%;
+    height: 500px;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+
+.last-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.last-animation-item {
+    position: relative;
+    max-width: 400px;
+}
+
+.last-animation-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.last-animation-item .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.last-animation-item:hover .hover-img {
+    opacity: 1;
 }
 
