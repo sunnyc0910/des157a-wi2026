@@ -97,6 +97,7 @@ footer a {
 
 
 .side-nav a:hover{
+  background: #FFFBEA;
   transform: translateY(3px);
   transition: ease-in-out 0.4s;
   
