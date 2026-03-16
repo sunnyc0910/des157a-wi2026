@@ -5,10 +5,11 @@
 
     const myForm = document.querySelector("#myform");
     const madlib = document.querySelector("#madlib");
+    const backdrop = document.querySelector("#overlay-backdrop");
 
     myForm.addEventListener("submit", function(event){
         event.preventDefault();
-        
+
 
         const name = document.querySelector("#name").value;
         const adj = document.querySelector("#adj").value;
@@ -57,25 +58,25 @@
         }
 
         else {
-        
+
             myText = `
                 <div class="paper-card">
-                    <button class="close-btn" onclick="document.querySelector('#madlib').classList.add('hidden')">×</button>
-                    
+                    <button class="close-btn" onclick="closeOverlay()">×</button>
+
                     <div class="card-header">
                         Galactic Cuteness Protection Center · Entry Approval
                     </div>
-                    
+
                     <div class="story-content">
                         <p><strong>Species:</strong> Earth Human Adoption</p>
                         <p><strong>Codename:</strong> <span class="fill-in">${name}</span></p>
-                        
+
                         <p><strong>Visual Scan:</strong> Upon inspection, this human appears extremely <span class="fill-in">${adj}</span>. It has a very pleasant texture and is classified as a Grade-A Protected Cutie.</p>
-                        
+
                         <p><strong>Special Abilities:</strong> Surprisingly, this human possesses a mysterious telepathic ability. It claims to be able to communicate fluently with <span class="fill-in">${fruit}</span>s and frequently holds secret meetings with them.</p>
-                        
+
                         <p><strong>Luggage Declaration:</strong> The human is clinging tightly to a <span class="fill-in">${noun}</span> and refuses to let go. It claims this object is its "lifeline." Confiscation is strictly prohibited.</p>
-                        
+
                         <p><strong>Care & Soothing Guide:</strong><br>
                         1. You must feed it <span class="fill-in">${food}</span> regularly, otherwise the human will make strange whimpering noises.<br>
                         2. If the human appears nervous, please gently <span class="fill-in">${verb}</span> its head until it falls asleep.</p>
@@ -95,14 +96,26 @@
             document.querySelector("#food").value = '';
             document.querySelector("#verb").value = '';
             document.querySelector("#animal").value = '';
-            
 
+            madlib.innerHTML = myText;
             madlib.classList.remove("hidden");
+            backdrop.classList.remove("hidden");
+            return;
         }
 
-
         madlib.innerHTML = myText;
-        
+
+    });
+
+    //click to close
+    backdrop.addEventListener("click", function() {
+        closeOverlay();
     });
 
 })();
+
+// Function to close the overlay
+function closeOverlay() {
+    document.querySelector("#madlib").classList.add("hidden");
+    document.querySelector("#overlay-backdrop").classList.add("hidden");
+}

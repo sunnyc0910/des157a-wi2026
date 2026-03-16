@@ -23,7 +23,7 @@
 body {
     margin: 0;
     font-family: "Audiowide", sans-serif;
-    color: white;
+    color: #5D4061;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -39,7 +39,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/bg.jpg');
+    background-image: url('images/bg.svg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -47,31 +47,32 @@ body {
 
 
 main {
-    
+
     display: flex;
     position: relative;
-    
-    
-    width: 90vw;  
-    height: 90vh; 
-    max-width: 1600px; 
-    
-  
-    border-radius: 30px;
-    border: 3px solid #F1FF4F; 
-    background: rgba(0, 0, 0, 0.65); 
-    
+
+
+    width: 90vw;
+    height: 90vh;
+    max-width: 1600px;
+
+
     box-sizing: border-box;
     padding: 20px;
-    
 
-    margin: auto; 
+
+    margin: auto;
 }
 
+#illustration1 {
+    width: 50%;
+    object-fit: contain;
+}
 
-.left-panel {
-    width: 45%;
-    padding: 20px;
+.right-panel {
+    width: 50%;
+
+    padding: 80px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -79,17 +80,8 @@ main {
 }
 
 
-.ufo-img {
-    position: absolute;
-    top: -40px;
-    left: -50px;
-    width: 120px;
-    z-index: 10;
-}
-
-
 #myform {
-    border-left: 4px solid #F4F859;
+    border-left: 4px solid #5D4061;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -99,7 +91,7 @@ main {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -107,20 +99,21 @@ main {
 .form-group input[type="text"] {
     display: block;
     width: 100%;
-    background: transparent;
-    border: 2px solid #F4F859; 
-    border-radius: 25px; 
+    background: #FFFBEA;
+    border: 2px solid #5D4061;
+    border-radius: 25px;
     height: 40px;
     padding: 0 15px;
-    color: #F4F859;
+    color: #FF59A4;
     font-family: "Chakra Petch", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     outline: none;
 }
 
 .form-group input[type="text"]:focus {
-    box-shadow: 0 0 10px #F4F859;
-    background: rgba(244, 248, 89, 0.1);
+    background: #FFFBEA;
+    box-shadow: 0 0 15px #FF59A4;
+
 }
 
 
@@ -133,7 +126,7 @@ input[type="submit"] {
     border-radius: 25px;
     font-family: "Audiowide", sans-serif;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1.4rem;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -144,7 +137,6 @@ input[type="submit"]:hover {
 
 
 #madlib {
-
     transition: opacity 0.5s ease;
 }
 
@@ -152,28 +144,45 @@ input[type="submit"]:hover {
 .hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
 
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 224, 245, 0.9);
+    z-index: 0;
+    transition: opacity 0.5s ease;
+}
+
 .overlay {
-    position: absolute;
-    right: 0;
+    position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
-    background-color: #FFFEEC; 
-    color: #1a1a1a;
+    max-width: 700px;
+    max-height: 80vh;
+    background-color: #FFFEEC;
+    color: #5D4061;
     padding: 40px;
     border-radius: 15px;
-    border: 3px solid #1a1a1a;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+    border: 3px solid #FF59A4;
+    
     font-family: "Chakra Petch", sans-serif;
-    z-index: 100;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    overflow-y: auto;
 }
 
 
 .card-header {
-    border: 2px solid #1a1a1a;
+    border: 2px solid #FF59A4;
+    background-color: #F4F859;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
@@ -187,7 +196,7 @@ input[type="submit"]:hover {
 }
 
 .fill-in {
-    color: #d6006e;
+    color: #FF59A4;
     font-weight: 800;
     text-decoration: none;
     font-family: "Chakra Petch", sans-serif;
@@ -199,7 +208,7 @@ input[type="submit"]:hover {
     right: 15px;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #1a1a1a;
 }
