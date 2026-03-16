@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Cuteness Entry Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:ital,wght@0,400;0,600;1,400;1,600&family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+        (function(){
+
+            "use strict";
+            console.log("reading js");
+
+            const myForm = document.querySelector("#myform");
+            const madlib = document.querySelector("#madlib");
+
+            myForm.addEventListener("submit", function(event){
+                event.preventDefault();
+                
+
+                const name = document.querySelector("#name").value;
+                const adj = document.querySelector("#adj").value;
+                const fruit = document.querySelector("#fruit").value;
+                const noun = document.querySelector("#noun").value;
+                const food = document.querySelector("#food").value;
+                const verb = document.querySelector("#verb").value;
+                const animal = document.querySelector("#animal").value;
+
+                let myText;
+
+
+                if (name == '') {
+                    myText = "Please provide a name";
+                    document.querySelector('#name').focus();
+                }
+
+                else if (adj == '') {
+                    myText = "Please provide an adjective";
+                    document.querySelector('#adj').focus();
+                }
+
+                else if (fruit == '') {
+                    myText = "Please provide a fruit name";
+                    document.querySelector('#fruit').focus();
+                }
+
+                else if (noun == '') {
+                    myText = "Please provide a noun";
+                    document.querySelector('#noun').focus();
+                }
+
+                else if (food == '') {
+                    myText = "Please provide a food";
+                    document.querySelector('#food').focus();
+                }
+
+                else if (verb == '') {
+                    myText = "Please provide a verb";
+                    document.querySelector('#verb').focus();
+                }
+
+                else if (animal == '') {
+                    myText = "Please provide an animal name";
+                    document.querySelector('#animal').focus();
+                }
+
+                else {
+                
+                    myText = '';
+
+
+                    document.querySelector("#name").value = '';
+                    document.querySelector("#adj").value = '';
+                    document.querySelector("#fruit").value = '';
+                    document.querySelector("#noun").value = '';
+                    document.querySelector("#food").value = '';
+                    document.querySelector("#verb").value = '';
+                    document.querySelector("#animal").value = '';
+                    
+
+                    madlib.classList.remove("hidden");
+                }
+
+
+                madlib.innerHTML = myText;
+                
+            });
+
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="background-container"></div>
+
+    <main>
+        <img src="images/rat.png" id="bouncer" alt="Floating Rat">
+        <section class="left-panel">
+
+            <img src="images/ufo.png" alt="Cute UFO" class="ufo-img">
+
+            <form id="myform">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="adj">Adjective (Describing texture)</label>
+                    <input type="text" id="adj" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="fruit">Name of a fruit</label>
+                    <input type="text" id="fruit" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="noun">Noun</label>
+                    <input type="text" id="noun" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="food">Food (or snack)</label>
+                    <input type="text" id="food" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="verb">Verb</label>
+                    <input type="text" id="verb" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="animal">Name of a Animal</label>
+                    <input type="text" id="animal" required autocomplete="off">
+                </div>
+
+                <input type="submit" value="GENERATE ENTRY PASS">
+            </form>
+        </section>
+
+        
+            </article>
+
+    </main>
+</body>
+</html>
