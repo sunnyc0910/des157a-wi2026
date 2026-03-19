@@ -1,0 +1,299 @@
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chakra-petch-regular {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chakra-petch-semibold {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Audiowide", sans-serif;
+    color: #5D4061;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg.svg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+main {
+
+    display: flex;
+    position: relative;
+
+
+    width: 90vw;
+    height: 90vh;
+    max-width: 1600px;
+
+
+    box-sizing: border-box;
+    padding: 20px;
+
+
+    margin: auto;
+}
+
+#illustration1 {
+    width: 50%;
+    object-fit: contain;
+    animation: slideUpIn 0.8s ease-out, float 6s ease-in-out 0.8s infinite;
+    position: relative;
+}
+
+@keyframes slideUpIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    25% {
+        transform: translateY(-20px) translateX(15px);
+    }
+    50% {
+        transform: translateY(-30px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-15px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+#object1 {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: floatScreen 15s ease-in-out infinite;
+}
+
+@keyframes floatScreen {
+    0% {
+        top: 2%;
+        left: 10%;
+    }
+    25% {
+        top: 2%;
+        left: 85%;
+    }
+    50% {
+        top: 85%;
+        left: 85%;
+    }
+    75% {
+        top: 85%;
+        left: 10%;
+    }
+    100% {
+        top: 2%;
+        left: 10%;
+    }
+}
+
+.right-panel {
+    width: 50%;
+
+    padding: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideDownIn 0.8s ease-out;
+}
+
+@keyframes slideDownIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+#myform {
+    border-left: 4px solid #5D4061;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-group input[type="text"] {
+    display: block;
+    width: 100%;
+    background: #FFFBEA;
+    border: 2px solid #5D4061;
+    border-radius: 25px;
+    height: 40px;
+    padding: 0 15px;
+    color: #FF59A4;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus {
+    background: #FFFBEA;
+    box-shadow: 0 0 15px #FF59A4;
+
+}
+
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background: #F4F859;
+    color: #5D4061;
+    border: none;
+    border-radius: 25px;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    animation: slideUpIn 2.5s ease-out 0.3s backwards;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+
+#madlib {
+    transition: opacity 0.5s ease;
+}
+
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 224, 245);
+    z-index: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 700px;
+    max-height: 80vh;
+    background-color: #FFFEEC;
+    color: #5D4061;
+    padding: 40px;
+    border-radius: 15px;
+    border: 3px solid #FF59A4;
+    
+    font-family: "Chakra Petch", sans-serif;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    overflow-y: auto;
+}
+
+
+.card-header {
+    border: 2px solid #FF59A4;
+    background-color: #F4F859;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.fill-in {
+    color: #FF59A4;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+
+.play-again-btn {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 12px;
+    background: #E0A8F4;
+    color: #5D4061;
+    border-radius: 25px;
+    font-family: "Audiowide", sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: block;
+}
+
+.play-again-btn:hover {
+    transform: scale(1.03);
+}
